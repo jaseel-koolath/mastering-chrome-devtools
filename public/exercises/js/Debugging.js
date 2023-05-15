@@ -5,11 +5,12 @@ try {
     .then((response) => response.json())
     .then((result) => {
       result.forEach((item) => {
-        const li = document.newElement("li");
-        li.innerText = item.fact;
+        const li = document.createElement("li");
+        li.innerText = item.text;
         list.appendChild(li);
       });
     });
 } catch (e) {
   // Silence is golden
+  console.log(e)
 }
